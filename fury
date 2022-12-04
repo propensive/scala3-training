@@ -35,4 +35,4 @@ project training
 # │ more information, see: https://fury.build/                                     │
 # └────────────────────────────────────────────────────────────────────────────────┘
 script
-    . <(echo H4sIAAAAAAAAA3VQTWvCQBS8+yuGICE5bIK1RpeiB8HSQq2nntTD7r7dJphEm2QpBX98d/VUG28PZt58LV/f58Y2P0/RFswgGL5s1qs0UULlOk08EmCP8xlRdaCiATv95QQIQ3x/6g7sa9P/7sDLlUhblOS1lG1KsPbtFlr0CsSx99hiGEUVTVpb9bOuIWnigtwjINeCwNT4IcYclHHBtSYiQ5qUGY9mmeSPU5JkuBTc9Xa+bY7/Yt7r1BR15xb7qIUsNbojSmFrlePZF9rVweAXpOlwUlwBAAA= | base64 -d | gzip -d)
+    BIN=fury;([ -f "$HOME/.cache/.fury" ] || (mkdir -p "$HOME/.cache" && wget -qO "$HOME/.cache/.fury" get.fury.build || curl -sL get.fury.build > "$HOME/.cache/.fury")) && [ $((md5sum "$HOME/.cache/.fury") || (md5 -q "$HOME/.cache/.fury") | head -c32) = d69a9eedddfdedcf3186b947dbdf9ba9 ] && sh $HOME/.cache/.fury || printf "Unable to launch Fury.\n"
