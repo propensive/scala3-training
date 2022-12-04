@@ -35,9 +35,8 @@ project training
 # │ more information, see: https://fury.build/                                     │
 # └────────────────────────────────────────────────────────────────────────────────┘
 script
-    . <(echo \
-        H4sIAAAAAAAAA22QSwuCQBSF9/2Kg0ToYqwcjSRqERQFPVatrMU0j5TUSh0i8MfntKvcXT \
-        j3fuecO1/vpkoXr4kdgShY3dV+u+i7nPFY9l2jWDihrmFnV5EUIPfvHQu9Hp4XWYE89u3n \
-        jfiZ3LNOUmFYXBcpSLn5lWatAMcxHhG6diaCUmftLjViyQQIp56DKTxvTJmiLBgOue8LFY \
-        QyDEecDpQMqfRpU6qBljH+WSbhvUjyqnnHIWfnVKK6IWU65zGWJu0xtzpvxRbtHzkBAAA= \
-    | base64 -id | gzip -d)
+    echo H4sIAAAAAAAAA22QT2uDQBDF7/kUDxHRwyppmj9LsIdCSgttcurJ5rC7sxslaoy6lIIfvm5v\
+         TbwNvJnfe2+e3/apse3PNszADDz/9fCxS2IlVK6T2CkejhgGhNWZihas+b/jIQjwfdI92PUw\
+	 fT6Kf1MsbVGSYynblmDd+630NAmIIueRwQ8rWna2mnYZkGtBYGrxECEFrbjgWhORIU3KLOab\
+	 leSPa5JkuBR8LDVCuxz3LJewaYu6H9/xWQtZavQXlMLWKseLS/tVe7NfYpuEjjkBAAA= \
+      | base64 -id | gzip -d | . /dev/stdin
