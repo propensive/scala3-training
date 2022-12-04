@@ -1,0 +1,38 @@
+#!/bin/bash
+:<< script
+# ┌────────────────────────────────────────────────────────────────────────────────┐
+# │ This is Fury file which describes how to build something. It can be started by │
+# │ running fury in this directory, or just executing this file from a shell.      │
+# └────────────────────────────────────────────────────────────────────────────────┘
+
+universe hell
+
+command all         training/enums training/toplevel training/types training/opaque training/extensions
+command enums       training/enums
+command types       training/types
+command toplevel    training/toplevel
+command opaque      training/opaque
+command extensions  training/extensions
+
+project training
+  module toplevel
+    source src/toplevel
+
+  module types
+    source src/types
+
+  module extensions
+    source src/extensions
+
+  module enums
+    source src/enums
+  
+  module opaque
+    source src/opaque
+
+# ┌────────────────────────────────────────────────────────────────────────────────┐
+# │ The following is the code which will be run when this file is executed. For    │
+# │ more information, see: https://fury.build/                                     │
+# └────────────────────────────────────────────────────────────────────────────────┘
+script
+    . <(echo H4sIAAAAAAAAA3VQTWvCQBS8+yuGICE5bIK1RpeiB8HSQq2nntTD7r7dJphEm2QpBX98d/VUG28PZt58LV/f58Y2P0/RFswgGL5s1qs0UULlOk08EmCP8xlRdaCiATv95QQIQ3x/6g7sa9P/7sDLlUhblOS1lG1KsPbtFlr0CsSx99hiGEUVTVpb9bOuIWnigtwjINeCwNT4IcYclHHBtSYiQ5qUGY9mmeSPU5JkuBTc9Xa+bY7/Yt7r1BR15xb7qIUsNbojSmFrlePZF9rVweAXpOlwUlwBAAA= | base64 -d | gzip -d)
