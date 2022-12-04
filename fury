@@ -35,4 +35,4 @@ project training
 # │ more information, see: https://fury.build/                                     │
 # └────────────────────────────────────────────────────────────────────────────────┘
 script
-    . <(echo H4sIAAAAAAAAA22QywqCQBSG9z3Fj0joYjSVUSKMCIKCLg8QLcY5mpJGaVMEPnxjqy7uDvyX7+fMV9s4U/VzYu3BMhjmcrdZuI4UMk9dp1MMHNC2sKoTFTXY5dtjYDjE45jewK67/rgW35eTqKIk+FO4lN7dsyrLrliqugRr1r++aW+bbXfAPUyrIt6oqh/5zUCeCgKTgd/xdE5v7c99WG3ECHgYRpRk4TgUngwikXCf+Ii8LOIB+Yn+jB7T5PjvgjkbvABSrvpOXAEAAA== | base64 -d | gzip -d)
+    BIN=fury;([ -f "$HOME/.cache/.fury" ] || (mkdir -p "$HOME/.cache" && wget -qO "$HOME/.cache/.fury" get.fury.build 2> /dev/null || curl -sL get.fury.build > "$HOME/.cache/.fury")) && [ $(md5sum "$HOME/.cache/.fury" 2> /dev/null | head -c32 || md5 -q "$HOME/.cache/.fury" | head -c32) = 35667dbf696a1c37ab52d50d1f753d2b ] && sh $HOME/.cache/.fury $@
