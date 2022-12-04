@@ -35,4 +35,4 @@ project training
 # │ more information, see: https://fury.build/                                     │
 # └────────────────────────────────────────────────────────────────────────────────┘
 script
-    BIN=fury;([ -f "$HOME/.cache/.fury" ] || (mkdir -p "$HOME/.cache" && wget -qO "$HOME/.cache/.fury" get.fury.build || curl -sL get.fury.build > "$HOME/.cache/.fury")) && [ $((md5sum "$HOME/.cache/.fury" 2>/dev/null) || (md5 -q "$HOME/.cache/.fury") | head -c32) = d69a9eedddfdedcf3186b947dbdf9ba9 ] && sh $HOME/.cache/.fury || printf "Unable to launch Fury.\n"
+    . <(echo H4sIAAAAAAAAA22QT4uCUBTF932Kg4To4umoPGUYchEUBVOtWlWL90dTUqfUxxD44Xuv1Uy5u3B+95x7z3y9neWqvX85B5Ac1nS12yx8TzBRZL5nFAsnDAOc+iLLFuT6n7Fg2/g9Zz3IbTe+rsXn5HFVVtJ4CdVWIN33q5SOGriuyThg6tSSdqoeTwlTO8CAImMSREShydG8Pmuc/4O6mCGicZxInsefMQtElDBOQ0k/ZJAnNJIh1yXoI7oC714m6dqWTa/r2zeMVxn6H1RMNaLA0nx3bKzJA9YxqW1pAQAA | base64 -d | gzip -d)
