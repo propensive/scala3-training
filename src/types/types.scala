@@ -10,6 +10,7 @@ object Checks:
   type B = Int
   type C = Exception
 
+/*
   summon[           Any ?:? Nothing           ] // 1
   summon[             A ?:? Nothing           ] // 2
   summon[             B ?:? Any               ] // 3
@@ -25,7 +26,7 @@ object Checks:
   summon[ (A & (B | C)) ?:? (C & A)           ] // 12
   summon[   (A & B & C) ?:? (C & B & C & A)   ] // 13
   summon[ (B | (A & C)) ?:? ((A | B) & (C | B)) ] // 14
-
+*/
 // Some simple type definitions
 @targetName("unknownRelation")
 infix type ?:?[L, R]

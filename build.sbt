@@ -4,7 +4,8 @@ lazy val root = project
     name := "examples",
     description := "Scala 3 Training Examples",
     version := "1.0.0",
-    scalaVersion := dottyLatestNightlyBuild.get,
-    scalaSource := baseDirectory.value / "src"
+    scalaVersion := "3.2.0",
+    scalacOptions ++= Seq()
   )
 
+Compile / scalaSource := baseDirectory.value / "src"
