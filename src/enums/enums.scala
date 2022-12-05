@@ -1,26 +1,27 @@
+
+// git clone https://github.com/propensive/scala3-training/
+// > sbt
+// sbt> compile
+
 package repetition
 
-sealed trait Weekday
-case object Mon extends Weekday
-case object Tue extends Weekday
-case object Wed extends Weekday
-case object Thu extends Weekday
-case object Fri extends Weekday
-case object Sat extends Weekday
-case object Sun extends Weekday
+enum Weekday(longName: String):
+  case Mon extends Weekday("Monday")
+  case Tue extends Weekday("Tuesday")
+  case Wed extends Weekday("Wednesday")
+  case Thu extends Weekday("Thursday")
+  case Fri extends Weekday("Friday")
+  case Sat extends Weekday("Saturday")
+  case Sun extends Weekday("Sunday")
 
-sealed trait Repetition:
-  def annually: Int
+enum Repetition:
+  case Once
+  case EveryNDays(interval: Int)
+  case Weekly(days: Set[Weekday])
+  case Monthly(ord: Int, day: Weekday)
 
-case object Once extends Repetition:
-  def annually = 1
-
-case class EveryNDays(interval: Int) extends Repetition:
-  def annually: Int = 365/interval
-
-case class Weekly(days: Set[Weekday]) extends Repetition:
-  def annually: Int = days.size*52
-
-case class Monthly(ordinal: Int, day: Weekday) extends Repetition:
-  def annually: Int = 12
-
+  def annually: Int = this match
+    case Once                 => 1
+    case EveryNDays(interval) => 365/interval
+    case Weekly(days)         => days.size*52
+    case Monthly(ord, day)    => 12
