@@ -62,8 +62,8 @@ val eg2 =
   }
 
 // // This should not compile
-val eg3 =
+/*val eg3 =
   Env().guarantee[Path].in {
     println(pwdAsFile)
   }
-
+*/
